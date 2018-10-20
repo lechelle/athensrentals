@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('houses', 'HouseController@index')->name('houses');
+Route::get('houses/{zpid}', 'HouseController@show')->name('show_house');
